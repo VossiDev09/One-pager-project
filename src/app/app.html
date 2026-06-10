@@ -10,20 +10,24 @@
 <div>
     <img>
     <h2>Mein weg durch Fitness Motivation und Sport</h2>
-    <p>Hier findest du meine Trainingspkäne, Erfahrungen und Einblicke aus meinem sportlichen Alltag</p>
+    <p>Hier findest du meine Trainingspläne, Erfahrungen und Einblicke aus meinem sportlichen Alltag</p>
 </div>
-<div>
-    <p>Platzhalter!</p>
-    <p>Platzhalter!</p>
-    <p>Platzhalter!</p>
-    <p>Platzhalter!</p>
+<div class="boxes-container">
+    <div class="box" *ngFor="let item of personalBoxes">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+    </div>
 </div>
-<div>
-    <p>Platzhalter!</p>
-    <p>Platzhalter!</p>
-    <p>Platzhalter!</p>
-    <button>Mehr anzeigen</button>
-</div>
+<section class="posts-section">
+    <h2>Meine Posts</h2>
+    <div class="posts-container">
+        <article class="post-box" *ngFor="let post of posts">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.text }}</p>
+        </article>
+    </div>
+    <button class="show-more">Mehr anzeigen</button>
+</section>
 <div>
     <h2>Kontakt</h2>
     <button img="">Instagram</button>
