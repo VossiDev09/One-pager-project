@@ -1,11 +1,11 @@
 <div class="page classic-font">
     <header class="site-header">
         <nav>
-            <a href="#ueber-mich">Über mich</a>
-            <a href="#blog">Blog</a>
-            <a href="#start">Sport Blog</a>
-            <a href="#links">Links</a>
-            <a href="#kontakt">Kontakt</a>
+            <a href="#ueber-mich" (click)="scrollToSection($event, 'ueber-mich')">Über mich</a>
+            <a href="#blog" (click)="scrollToSection($event, 'blog')">Blog</a>
+            <a href="#start" (click)="scrollToSection($event, 'start')">Sport Blog</a>
+            <a href="#links" (click)="scrollToSection($event, 'links')">Links</a>
+            <a href="#kontakt" (click)="scrollToSection($event, 'kontakt')">Kontakt</a>
         </nav>
     </header>
     <section class="hero" id="start" aria-label="Einleitung mit Hintergrundbild">
