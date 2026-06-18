@@ -1,0 +1,12 @@
+<section class="posts-section" id="blog">
+  <h2>Meine Posts</h2>
+  <div class="posts-container">
+    @for (post of posts(); track post.title) {
+      <article class="post-box">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.text }}</p>
+      </article>
+    }
+  </div>
+  <button type="button" class="show-more">Mehr anzeigen</button>
+</section>

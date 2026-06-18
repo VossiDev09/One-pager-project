@@ -1,0 +1,78 @@
+.site-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  position: sticky;
+  top: 0.75rem;
+  z-index: 20;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  width: min(100%, 760px);
+  padding: 0.7rem;
+  border: 1px solid rgba(16, 35, 27, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 14px 30px rgba(16, 35, 27, 0.12);
+  backdrop-filter: blur(16px);
+  animation: slide-down 700ms 60ms ease-out both;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: #183428;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.96rem;
+  position: relative;
+  transition: color 220ms ease, background-color 220ms ease, transform 220ms ease;
+}
+
+.site-header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: -0.12rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1e5f45, #2b7b59);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 220ms ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+  color: #0f2e22;
+  background-color: rgba(255, 255, 255, 0.82);
+  transform: translateY(-1px);
+}
+
+.site-header nav a:hover::after,
+.site-header nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 560px) {
+  .site-header nav {
+    border-radius: 24px;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
+  }
+
+  .site-header nav a {
+    flex: 0 0 auto;
+  }
+}

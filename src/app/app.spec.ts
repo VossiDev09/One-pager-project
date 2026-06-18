@@ -14,10 +14,18 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', async () => {
+  it('should render the hero heading', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, one-pager');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Mein Weg');
+  });
+
+  it('should render the navigation links', async () => {
+    const fixture = TestBed.createComponent(App);
+    await fixture.whenStable();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const links = compiled.querySelectorAll('.site-header nav a');
+    expect(links.length).toBe(5);
   });
 });

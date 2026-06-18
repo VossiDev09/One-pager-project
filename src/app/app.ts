@@ -1,43 +1,21 @@
-import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { About } from './components/about/about';
+import { Blog } from './components/blog/blog';
+import { Contact } from './components/contact/contact';
+import { Footer } from './components/footer/footer';
+import { Header } from './components/header/header';
+import { Hero } from './components/hero/hero';
+import { PERSONAL_BOXES, POSTS, SOCIAL_LINKS } from './data/site-content';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule],
+  imports: [Header, Hero, About, Blog, Contact, Footer],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
-  protected readonly title = signal('one-pager');
-  protected readonly personalBoxes = [
-    { title: 'Box 1', text: 'Inhalt für Box 1' },
-    { title: 'Box 2', text: 'Inhalt für Box 2' },
-    { title: 'Box 3', text: 'Inhalt für Box 3' },
-  ];
-  protected readonly posts = [
-    { title: 'Box 1', text: 'Inhalt für Box 1' },
-    { title: 'Box 2', text: 'Inhalt für Box 2' },
-    { title: 'Box 3', text: 'Inhalt für Box 3' },
-  ];
-
-  protected scrollToSection(event: Event, sectionId: string): void {
-    event.preventDefault();
-
-    const target = document.getElementById(sectionId);
-    if (!target) {
-      return;
-    }
-
-    const header = document.querySelector('.site-header');
-    const headerHeight = header instanceof HTMLElement ? header.offsetHeight : 0;
-    const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    window.scrollTo({
-      top,
-      behavior: reduceMotion ? 'auto' : 'smooth'
-    });
-
-    history.replaceState(null, '', `#${sectionId}`);
-  }
+  protected readonly personalBoxes = PERSONAL_BOXES;
+  protected readonly posts = POSTS;
+  protected readonly socialLinks = SOCIAL_LINKS;
 }

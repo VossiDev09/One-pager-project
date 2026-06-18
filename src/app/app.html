@@ -1,52 +1,10 @@
-<div class="page classic-font">
-    <header class="site-header">
-        <nav>
-            <a href="#ueber-mich" (click)="scrollToSection($event, 'ueber-mich')">Über mich</a>
-            <a href="#blog" (click)="scrollToSection($event, 'blog')">Blog</a>
-            <a href="#start" (click)="scrollToSection($event, 'start')">Sport Blog</a>
-            <a href="#links" (click)="scrollToSection($event, 'links')">Links</a>
-            <a href="#kontakt" (click)="scrollToSection($event, 'kontakt')">Kontakt</a>
-        </nav>
-    </header>
-    <section class="hero" id="start" aria-label="Einleitung mit Hintergrundbild">
-        <div class="hero-content">
-            <p class="hero-kicker">Sport. Routine. Motivation.</p>
-            <h1>Mein Weg durch Fitness, Motivation und Sport</h1>
-            <p>Hier findest du meine Trainingspläne, Erfahrungen und Einblicke aus meinem sportlichen Alltag.</p>
-        </div>
-    </section>
-    <section class="boxes-container" id="ueber-mich">
-        @for (item of personalBoxes; track item.title) {
-        <div class="box">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.text }}</p>
-        </div>
-        }
-    </section>
-    <section class="posts-section" id="blog">
-        <h2>Meine Posts</h2>
-        <div class="posts-container">
-            @for (post of posts; track post.title) {
-            <article class="post-box">
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.text }}</p>
-            </article>
-            }
-        </div>
-        <button class="show-more">Mehr anzeigen</button>
-    </section>
-    <section class="contact" id="kontakt">
-        <h2>Kontakt</h2>
-        <div class="social-links" id="links">
-            <button img="">Instagram</button>
-            <button img="">Tiktok</button>
-            <button img="">Youtube</button>
-        </div>
-    </section>
-    <footer class="footer-links">
-        <p>Impressum</p>
-        <p>Datenschutz</p>
-        <p>Kontakinformationen</p>
-        <p>Navigationen</p>
-    </footer>
+<div class="page">
+  <app-header />
+  <main>
+    <app-hero />
+    <app-about [cards]="personalBoxes" />
+    <app-blog [posts]="posts" />
+    <app-contact [socials]="socialLinks" />
+  </main>
+  <app-footer />
 </div>

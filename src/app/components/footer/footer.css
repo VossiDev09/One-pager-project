@@ -1,0 +1,16 @@
+.footer-links {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto 1.75rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: #4f6c61;
+  font-size: 0.95rem;
+  animation: fade-up 760ms 560ms ease-out both;
+}
+
+.footer-links p {
+  margin: 0;
+}
