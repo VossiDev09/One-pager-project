@@ -33,18 +33,6 @@ export const POSTS: readonly Post[] = [
   { title: 'Box 1', text: 'Inhalt für Box 1' },
   { title: 'Box 2', text: 'Inhalt für Box 2' },
   { title: 'Box 3', text: 'Inhalt für Box 3' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
-    { title: 'Box 1', text: 'Inhalt für Box 1' },
-  { title: 'Box 2', text: 'Inhalt für Box 2' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
-    { title: 'Box 1', text: 'Inhalt für Box 1' },
-  { title: 'Box 2', text: 'Inhalt für Box 2' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
 ];
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
