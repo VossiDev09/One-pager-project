@@ -1,12 +1,32 @@
 <section class="posts-section" id="blog">
   <h2>Meine Posts</h2>
-  <div class="posts-container">
-    @for (post of posts(); track post.title) {
-      <article class="post-box">
+  <div
+    #postsContainer
+    class="posts-container"
+  >
+    @for (post of displayedPosts(); track $index) {
+      <article class="post-box" [class.is-exiting]="isPostExiting($index)" [style.--item-index]="$index">
         <h3>{{ post.title }}</h3>
         <p>{{ post.text }}</p>
       </article>
     }
   </div>
-  <button type="button" class="show-more">Mehr anzeigen</button>
+  @if (hasMorePosts() || shouldRenderLessButton()) {
+    <div class="posts-actions">
+      @if (shouldRenderLessButton()) {
+        <button
+          type="button"
+          class="show-more show-less"
+          [class.is-exiting]="isHidingLessButton() && !canShowLessPosts()"
+          [disabled]="exitingFromIndex() !== null"
+          (click)="showLess()"
+        >
+          Weniger anzeigen
+        </button>
+      }
+      @if (hasMorePosts()) {
+        <button type="button" class="show-more" (click)="showMore()">Mehr anzeigen</button>
+      }
+    </div>
+  }
 </section>
