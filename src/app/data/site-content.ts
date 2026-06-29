@@ -1,11 +1,5 @@
 import { InfoCard, NavLink, Post, SocialLink } from '../models/content';
 
-/**
- * Static page content. Kept separate from components so copy can change
- * without touching presentation logic. Section ids must match the element
- * ids rendered by the corresponding components for in-page navigation.
- */
-
 export const NAV_LINKS: readonly NavLink[] = [
   { id: 'ueber-mich', label: 'Über mich' },
   { id: 'blog', label: 'Blog' },

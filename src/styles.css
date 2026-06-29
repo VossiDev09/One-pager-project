@@ -1,5 +1,3 @@
-/* Global styles: document-level reset, typography, shared animations. */
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6.8rem;
@@ -15,12 +13,6 @@ body {
   color: #10231b;
   font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
-
-/*
- * Keyframes live here because component-scoped stylesheets share these
- * animations; @keyframes names are global, so defining them once avoids
- * duplication across components.
- */
 
 @keyframes fade-in-page {
   from {

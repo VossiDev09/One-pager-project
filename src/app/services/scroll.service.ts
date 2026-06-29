@@ -1,17 +1,8 @@
 import { DOCUMENT, Injectable, inject } from '@angular/core';
 
-/** Selector of the sticky header whose height offsets the scroll target. */
 const HEADER_SELECTOR = '.site-header';
 
-/** Extra breathing room above the target after accounting for the header. */
 const SCROLL_OFFSET_PX = 16;
-
-/**
- * Smoothly scrolls to an in-page section, compensating for the sticky header
- * and honouring the user's reduced-motion preference. Goes through the
- * injected `DOCUMENT` (and its `defaultView`) rather than the global
- * `document`/`window`, so it stays testable and safe outside the browser.
- */
 @Injectable({ providedIn: 'root' })
 export class ScrollService {
   private readonly document = inject(DOCUMENT);
