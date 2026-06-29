@@ -27,7 +27,7 @@ export const POSTS: readonly Post[] = [
 ];
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
-  { label: 'Instagram', url: '#' },
-  { label: 'Tiktok', url: '#' },
-  { label: 'Youtube', url: '#' },
+  { label: 'Instagram', url: 'https://www.instagram.com' },
+  { label: 'Tiktok', url: 'https://www.tiktok.com' },
+  { label: 'Youtube', url: 'https://www.youtube.com' },
 ];
