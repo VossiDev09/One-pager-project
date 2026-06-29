@@ -15,9 +15,18 @@ export const NAV_LINKS: readonly NavLink[] = [
 ];
 
 export const PERSONAL_BOXES: readonly InfoCard[] = [
-  { title: 'Box 1', text: 'Inhalt für Box 1' },
-  { title: 'Box 2', text: 'Inhalt für Box 2' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
+  {
+    title: '🥇 Erster Sieg im BMX',
+    text: 'In der Saison 2023 gewann ich mein erstes BMX-Rennen in der Altersklasse 13/14.',
+  },
+  {
+    title: '🏆 Erster Cupsieg',
+    text: 'In derselben Saison wurde ich dann OWL-Meister.',
+  },
+  {
+    title: '🏃 Erster Lauf',
+    text: '2026 startete ich mit dem Lauftraining und steigerte mich innerhalb von zwei Monaten von 2 km auf 9 km.',
+  },
 ];
 
 export const POSTS: readonly Post[] = [
