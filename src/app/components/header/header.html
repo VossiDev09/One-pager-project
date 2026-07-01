@@ -1,0 +1,7 @@
+<header class="site-header">
+  <nav>
+    @for (link of links; track link.id) {
+      <a [href]="'#' + link.id" (click)="navigate($event, link.id)">{{ link.label }}</a>
+    }
+  </nav>
+</header>

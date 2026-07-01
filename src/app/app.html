@@ -1,1 +1,10 @@
-<h1>hello</h1>
+<div class="page">
+  <app-header />
+  <main>
+    <app-hero />
+    <app-about [cards]="personalBoxes" />
+    <app-blog [posts]="posts" />
+    <app-contact [socials]="socialLinks" />
+  </main>
+  <app-footer />
+</div>

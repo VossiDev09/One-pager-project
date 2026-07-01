@@ -1,0 +1,10 @@
+<section class="contact" id="kontakt">
+  <h2>Kontakt</h2>
+  <div class="social-links" id="links">
+    @for (social of socials(); track social.label) {
+      <a class="social-link" [href]="social.url" target="_blank" rel="noopener noreferrer">
+        {{ social.label }}
+      </a>
+    }
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<footer class="footer-links">
+  <div class="footer-accordion">
+    <div class="footer-buttons">
+      @for (entry of entries; track entry.title) {
+        <button
+          type="button"
+          class="footer-button"
+          [class.active]="activeEntry === entry.title"
+          (click)="toggleEntry(entry.title)"
+        >
+          {{ entry.title }}
+        </button>
+      }
+    </div>
+
+    @if (activeEntryData) {
+      <div class="footer-panel">
+        @for (line of activeEntryData.content; track line) {
+          <p>{{ line }}</p>
+        }
+      </div>
+    }
+  </div>
+</footer>

@@ -1,4 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { About } from './components/about/about';
+import { Blog } from './components/blog/blog';
+import { Contact } from './components/contact/contact';
+import { Footer } from './components/footer/footer';
+import { Header } from './components/header/header';
+import { Hero } from './components/hero/hero';
+import { PERSONAL_BOXES, POSTS, SOCIAL_LINKS } from './data/site-content';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +15,7 @@ import { Component, signal } from '@angular/core';
   styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('one-pager');
+  protected readonly personalBoxes = PERSONAL_BOXES;
+  protected readonly posts = POSTS;
+  protected readonly socialLinks = SOCIAL_LINKS;
 }

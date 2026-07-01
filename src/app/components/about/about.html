@@ -1,0 +1,8 @@
+<section class="boxes-container" id="ueber-mich">
+  @for (card of cards(); track card.title) {
+    <article class="box">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
+    </article>
+  }
+</section>

@@ -1,0 +1,16 @@
+.page {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.25rem 0 3rem;
+  animation: fade-in-page 700ms ease-out both;
+}
+
+main {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .page {
+    width: min(100% - 1rem, 1120px);
+  }
+}
