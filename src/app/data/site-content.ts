@@ -24,9 +24,9 @@ export const PERSONAL_BOXES: readonly InfoCard[] = [
 ];
 
 export const POSTS: readonly Post[] = [
-  { title: 'Box 1', text: 'Inhalt für Box 1' },
-  { title: 'Box 2', text: 'Inhalt für Box 2' },
-  { title: 'Box 3', text: 'Inhalt für Box 3' },
+  { title: 'Erster Lauf', text: 'Bei meinem ersten Lauf bin ich 2,7 km durchgelaufen mit einer Geschwindigkeit von 5:50/km und habe trotz Lungenschmerzen nicht aufgehört.' },
+  { title: 'Erstes Mal über 5 km', text: 'Mein zweiter Meilenstein: mein erster Lauf über 5 km. Ich schaffte eine Gesamtstrecke von 7,5 km, war aber deutlich langsamer (6:30/km) und musste wegen Schmerzen im Fuß aufhören, nicht wegen der Ausdauer.' },
+  { title: 'Erster <10-km-Lauf', text: 'Bei meinem ersten Lauf über 10 km bin ich 12 km gelaufen bei einer Geschwindigkeit von 6:20/km. Leider suche ich immer noch nach einer Lösung für meine starken Fußschmerzen.' },
 ];
 
 export const SOCIAL_LINKS: readonly SocialLink[] = [
