@@ -9,10 +9,10 @@ import { PERSONAL_BOXES, POSTS, SOCIAL_LINKS } from './data/site-content';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Hero, About, Blog, Contact, Footer],
+  standalone: true,
+  imports: [],
   templateUrl: './app.html',
-  styleUrl: './app.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./app.css']
 })
 export class App {
   protected readonly personalBoxes = PERSONAL_BOXES;
