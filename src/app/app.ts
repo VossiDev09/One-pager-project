@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { About } from './components/about/about';
 import { Blog } from './components/blog/blog';
 import { Contact } from './components/contact/contact';
@@ -10,7 +10,7 @@ import { PERSONAL_BOXES, POSTS, SOCIAL_LINKS } from './data/site-content';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
+  imports: [Header, Hero, About, Blog, Contact, Footer],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
